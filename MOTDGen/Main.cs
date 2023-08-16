@@ -26,11 +26,11 @@ namespace MOTDGen
         {
             if (style == 2)
             {
-                MessageBox.Show("New style is currently unavailable. Your style choice has been overridden to 'Classic' style.");
+                MessageBox.Show("New style is currently unavailable. Your style choice has been overridden to 'Classic' style.", "Warning");
                 style = 1;
             } else if (style > 2 || style < 1)
             {
-                MessageBox.Show("Style selected is invalid. Your style choice has been overridden to 'Classic' style.");
+                MessageBox.Show("Style selected is invalid. Your style choice has been overridden to 'Classic' style.", "Warning");
                 style = 1;
             }
 
@@ -85,6 +85,35 @@ namespace MOTDGen
                 currentStyle = 2; // Assume new if otherwise
             }
             generateMOTD(currentStyle, this.headerTextbox.Text, this.messageTextbox.Text);
+        }
+
+        private void linksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pSMultiServerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Please note that I am not affiliated with the creator of PSMultiServer. I just think it's a neat tool.", "Warning");
+            System.Diagnostics.Process.Start("https://github.com/GitHubProUser67/PSMultiServer");
+        }
+
+        private void sVMLToolGithubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Kobun42/SVMLTool");
+        }
+
+        private void homeLaboratoryDiscordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to enter the Home Laboratory discord? \n\nThis server may NOT help you with problems for this tool. \nIf you are confused or having problems with this tool, please contact Kobun42 instead. \n\nIf you are otherwise interested in PlayStation Home online, feel free to join.", "Warning", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                System.Diagnostics.Process.Start("https://discord.gg/homelaboratory");
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
         }
     }
 }
