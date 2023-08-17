@@ -111,10 +111,6 @@ namespace MOTDGen
             {
                 System.Diagnostics.Process.Start("https://discord.gg/homelaboratory");
             }
-            else if (dialogResult == DialogResult.No)
-            {
-
-            }
         }
 
         private void Main_Load(object sender, EventArgs e)
