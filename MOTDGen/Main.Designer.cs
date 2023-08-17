@@ -34,6 +34,10 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.linksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pSMultiServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sVMLToolGithubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.homeLaboratoryDiscordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.styleGroup = new System.Windows.Forms.GroupBox();
             this.naviMOTD = new System.Windows.Forms.RadioButton();
             this.classicMOTD = new System.Windows.Forms.RadioButton();
@@ -42,10 +46,6 @@
             this.headerGroup = new System.Windows.Forms.GroupBox();
             this.headerTextbox = new System.Windows.Forms.TextBox();
             this.createButton = new System.Windows.Forms.Button();
-            this.linksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pSMultiServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sVMLToolGithubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.homeLaboratoryDiscordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.styleGroup.SuspendLayout();
             this.textGroup.SuspendLayout();
@@ -74,7 +74,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(91, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -93,6 +93,38 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // linksToolStripMenuItem
+            // 
+            this.linksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pSMultiServerToolStripMenuItem,
+            this.sVMLToolGithubToolStripMenuItem,
+            this.homeLaboratoryDiscordToolStripMenuItem});
+            this.linksToolStripMenuItem.Name = "linksToolStripMenuItem";
+            this.linksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.linksToolStripMenuItem.Text = "Links";
+            this.linksToolStripMenuItem.Click += new System.EventHandler(this.linksToolStripMenuItem_Click);
+            // 
+            // pSMultiServerToolStripMenuItem
+            // 
+            this.pSMultiServerToolStripMenuItem.Name = "pSMultiServerToolStripMenuItem";
+            this.pSMultiServerToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.pSMultiServerToolStripMenuItem.Text = "PSMultiServer";
+            this.pSMultiServerToolStripMenuItem.Click += new System.EventHandler(this.pSMultiServerToolStripMenuItem_Click);
+            // 
+            // sVMLToolGithubToolStripMenuItem
+            // 
+            this.sVMLToolGithubToolStripMenuItem.Name = "sVMLToolGithubToolStripMenuItem";
+            this.sVMLToolGithubToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.sVMLToolGithubToolStripMenuItem.Text = "SVMLTool Github";
+            this.sVMLToolGithubToolStripMenuItem.Click += new System.EventHandler(this.sVMLToolGithubToolStripMenuItem_Click);
+            // 
+            // homeLaboratoryDiscordToolStripMenuItem
+            // 
+            this.homeLaboratoryDiscordToolStripMenuItem.Name = "homeLaboratoryDiscordToolStripMenuItem";
+            this.homeLaboratoryDiscordToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.homeLaboratoryDiscordToolStripMenuItem.Text = "Home Laboratory Discord";
+            this.homeLaboratoryDiscordToolStripMenuItem.Click += new System.EventHandler(this.homeLaboratoryDiscordToolStripMenuItem_Click);
             // 
             // styleGroup
             // 
@@ -182,38 +214,6 @@
             this.createButton.UseVisualStyleBackColor = true;
             this.createButton.Click += new System.EventHandler(this.createButton_Click);
             // 
-            // linksToolStripMenuItem
-            // 
-            this.linksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pSMultiServerToolStripMenuItem,
-            this.sVMLToolGithubToolStripMenuItem,
-            this.homeLaboratoryDiscordToolStripMenuItem});
-            this.linksToolStripMenuItem.Name = "linksToolStripMenuItem";
-            this.linksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.linksToolStripMenuItem.Text = "Links";
-            this.linksToolStripMenuItem.Click += new System.EventHandler(this.linksToolStripMenuItem_Click);
-            // 
-            // pSMultiServerToolStripMenuItem
-            // 
-            this.pSMultiServerToolStripMenuItem.Name = "pSMultiServerToolStripMenuItem";
-            this.pSMultiServerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pSMultiServerToolStripMenuItem.Text = "PSMultiServer";
-            this.pSMultiServerToolStripMenuItem.Click += new System.EventHandler(this.pSMultiServerToolStripMenuItem_Click);
-            // 
-            // sVMLToolGithubToolStripMenuItem
-            // 
-            this.sVMLToolGithubToolStripMenuItem.Name = "sVMLToolGithubToolStripMenuItem";
-            this.sVMLToolGithubToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sVMLToolGithubToolStripMenuItem.Text = "SVMLTool Github";
-            this.sVMLToolGithubToolStripMenuItem.Click += new System.EventHandler(this.sVMLToolGithubToolStripMenuItem_Click);
-            // 
-            // homeLaboratoryDiscordToolStripMenuItem
-            // 
-            this.homeLaboratoryDiscordToolStripMenuItem.Name = "homeLaboratoryDiscordToolStripMenuItem";
-            this.homeLaboratoryDiscordToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.homeLaboratoryDiscordToolStripMenuItem.Text = "Home Laboratory Discord";
-            this.homeLaboratoryDiscordToolStripMenuItem.Click += new System.EventHandler(this.homeLaboratoryDiscordToolStripMenuItem_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +230,7 @@
             this.MaximizeBox = false;
             this.Name = "Main";
             this.Text = "PlayStation Home SVML Tool";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.styleGroup.ResumeLayout(false);

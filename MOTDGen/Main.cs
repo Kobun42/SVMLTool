@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace MOTDGen
 {
@@ -113,6 +114,18 @@ namespace MOTDGen
             else if (dialogResult == DialogResult.No)
             {
 
+            }
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            if ((bool)Properties.Settings.Default["FirstBoot"] == true)
+            {
+                // We don't want it happening twice!
+                Properties.Settings.Default["FirstBoot"] = false;
+                Properties.Settings.Default.Save();
+                // Warn the user that the tool will only work for SVO reliant versions of Home
+                MessageBox.Show("Please read the following before use of this tool:\n\nThis tool will NOT work on Home clients v1.70 or higher.\nThis is because they are not reliant on the SVO server and thus will not read files output by this program.\n\nPlease do not message me about the program 'not working' on these newer Home clients as this tool is intended for older versions of Home. \n\nFor best results, use on clients v1.32 or lower. \nThank you for using this tool. This notice will not appear again.", "First-run Reminder", MessageBoxButtons.OK);
             }
         }
     }
