@@ -27,11 +27,11 @@ namespace MOTDGen
         {
             if (style == 2)
             {
-                MessageBox.Show("New style is currently unavailable. Your style choice has been overridden to 'Classic' style.", "Warning");
+                MessageBox.Show("New style is currently unavailable. Your style choice has been overridden to 'Classic' style.", "Warning"); // waiting for more pcaps of this era
                 style = 1;
             } else if (style > 2 || style < 1)
             {
-                MessageBox.Show("Style selected is invalid. Your style choice has been overridden to 'Classic' style.", "Warning");
+                MessageBox.Show("Style selected is invalid. Your style choice has been overridden to 'Classic' style.", "Warning"); // or at least an ISE server based on 1.35? pls?...
                 style = 1;
             }
 
@@ -42,6 +42,7 @@ namespace MOTDGen
             }
 
             String MOTDClassic = $"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SVML>\r\n    <RECTANGLE class=\"CHIP_FACE\" name=\"backPanel\" x=\"292\" y=\"140\" width=\"708\" height=\"440\"/>\r\n    <RECTANGLE class=\"CHIP_RECESS\" name=\"backPanel\" x=\"300\" y=\"148\" width=\"692\" height=\"384\" fillColor=\"#FFFFFFFF\"/>\r\n\r\n    <TEXT name=\"text\" x=\"640\" y=\"171\" width=\"636\" height=\"26\" fontSize=\"26\" align=\"center\" textColor=\"#cc000000\">{header}</TEXT>\r\n\r\n    <TEXTAREA class=\"TEXTAREA1\" name=\"message\" x=\"308\" y=\"204\" width=\"664\" height=\"320\"\r\n\t\tfontSize=\"22\" lineSpacing=\"22\" linesVisible=\"14\"\r\n\t\treadonly=\"true\" selectable=\"false\" blinkCursor=\"false\"\r\n\t\ttextColor=\"#CC000000\" highlightTextColor=\"#FF000000\"\r\n\t\tleftPadValue=\"8\" topPadValue=\"8\" \r\n        defaultTextEntry=\"1\" defaultTextScroll=\"1\">{message}</TEXTAREA>\r\n    \r\n    <TEXT name=\"legend\" x=\"984\" y=\"548\" width=\"652\" height=\"18\" fontSize=\"18\" align=\"right\" textColor=\"#CCFFFFFF\">[CROSS] Continue</TEXT>\r\n    <QUICKLINK name=\"refresh\" button=\"SV_PAD_X\" linkOption=\"NORMAL\" href=\"../home/homeEnterWorld.jsp\"/>\r\n</SVML>\r\n";
+            // this redundant POS code above called MOTDClassic will be revamped whenever 1.35 MOTD format is found
 
             using (var sfd = new SaveFileDialog())
             {
@@ -64,7 +65,7 @@ namespace MOTDGen
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
            About about = new About();
-            about.Show();
+            about.Show(); // create and show about window
         }
 
         private void classicMOTD_CheckedChanged(object sender, EventArgs e)
@@ -80,7 +81,7 @@ namespace MOTDGen
             int currentStyle = 0;
             if (classicMOTD.Checked && !naviMOTD.Checked)
             {
-                currentStyle = 1;
+                currentStyle = 1; // Assume classic style (currently the only style)
             } else
             {
                 currentStyle = 2; // Assume new if otherwise
