@@ -11,6 +11,8 @@ namespace MOTDGen
 {
     partial class About : Form
     {
+
+        private static String legalStuff = "PlayStation Home is the property of Sony Computer Entertainment Europe. I am not affiliated in any way with any branch of Sony Computer Entertainment. This tool is intended for only noncommercial use. Any commercial use of this tool is prohibited.";
         public About()
         {
             InitializeComponent();
@@ -19,7 +21,7 @@ namespace MOTDGen
             this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
-            this.textBoxDescription.Text = AssemblyDescription;
+            this.textBoxDescription.Text = AssemblyDescription + "\r\n\r\n" + legalStuff;
         }
 
         #region Assembly Attribute Accessors
@@ -105,6 +107,11 @@ namespace MOTDGen
         private void okButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void About_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
