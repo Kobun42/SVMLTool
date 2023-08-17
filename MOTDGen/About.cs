@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,7 @@ namespace MOTDGen
     {
 
         private static String legalStuff = "PlayStation Home is the property of Sony Computer Entertainment Europe. I am not affiliated in any way with any branch of Sony Computer Entertainment. This tool is intended for only noncommercial use. Any commercial use of this tool is prohibited.";
+        SoundPlayer homeStartup = null;
         public About()
         {
             InitializeComponent();
@@ -106,12 +108,21 @@ namespace MOTDGen
 
         private void okButton_Click(object sender, EventArgs e)
         {
+            homeStartup.Stop();
+            homeStartup.Dispose();
+            homeStartup = null;
             this.Close();
         }
 
         private void About_Load(object sender, EventArgs e)
         {
+            homeStartup = new SoundPlayer(Properties.Resources.HomeStart);
+            homeStartup.Load();
+        }
 
+        private void logoPictureBox_Click(object sender, EventArgs e)
+        {
+            homeStartup.Play();
         }
     }
 }
