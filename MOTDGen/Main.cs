@@ -96,7 +96,7 @@ namespace MOTDGen
 
         private void pSMultiServerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Please note that I am not affiliated with the creator of PSMultiServer. I just think it's a neat tool.", "Warning");
+            MessageBox.Show("Please note that I am not affiliated with the creator of MultiServer. I just think it's a neat tool.", "Warning");
             System.Diagnostics.Process.Start("https://github.com/GitHubProUser67/PSMultiServer");
         }
 

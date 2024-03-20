@@ -74,7 +74,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(91, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -109,7 +109,7 @@
             // 
             this.pSMultiServerToolStripMenuItem.Name = "pSMultiServerToolStripMenuItem";
             this.pSMultiServerToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.pSMultiServerToolStripMenuItem.Text = "PSMultiServer";
+            this.pSMultiServerToolStripMenuItem.Text = "MultiServer";
             this.pSMultiServerToolStripMenuItem.Click += new System.EventHandler(this.pSMultiServerToolStripMenuItem_Click);
             // 
             // sVMLToolGithubToolStripMenuItem
