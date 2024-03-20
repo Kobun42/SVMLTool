@@ -110,7 +110,7 @@ namespace MOTDGen
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to enter the Home Laboratory discord? \n\nThis server may NOT help you with problems for this tool. \nIf you are confused or having problems with this tool, please contact Kobun42 instead. \n\nIf you are otherwise interested in PlayStation Home online, feel free to join.", "Warning", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                System.Diagnostics.Process.Start("https://discord.gg/homelaboratory");
+                System.Diagnostics.Process.Start("https://discord.gg/KRVpknsgG4");
             }
         }
 
