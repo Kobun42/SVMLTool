@@ -16,8 +16,6 @@ namespace MOTDGen
     public partial class Main : Form
     {
 
-        int st00pidm0nkey = 28282028;
-
         public Main()
         {
             InitializeComponent();
@@ -33,12 +31,6 @@ namespace MOTDGen
             {
                 MessageBox.Show("Style selected is invalid. Your style choice has been overridden to 'Classic' style.", "Warning"); // or at least an ISE server based on 1.35? pls?...
                 style = 1;
-            }
-
-            if (st00pidm0nkey == 28102010 && style == 2) // Style must be new for this easter egg, in other words it's not happenin' yet.
-            {
-                System.Diagnostics.Process.Start("http://cb-sc.com/doomstuff/lazure3000.mp3"); // what does this have to do with anything? nothing! now get out.
-                st00pidm0nkey++;
             }
 
             String MOTDClassic = $"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SVML>\r\n    <RECTANGLE class=\"CHIP_FACE\" name=\"backPanel\" x=\"292\" y=\"140\" width=\"708\" height=\"440\"/>\r\n    <RECTANGLE class=\"CHIP_RECESS\" name=\"backPanel\" x=\"300\" y=\"148\" width=\"692\" height=\"384\" fillColor=\"#FFFFFFFF\"/>\r\n\r\n    <TEXT name=\"text\" x=\"640\" y=\"171\" width=\"636\" height=\"26\" fontSize=\"26\" align=\"center\" textColor=\"#cc000000\">{header}</TEXT>\r\n\r\n    <TEXTAREA class=\"TEXTAREA1\" name=\"message\" x=\"308\" y=\"204\" width=\"664\" height=\"320\"\r\n\t\tfontSize=\"22\" lineSpacing=\"22\" linesVisible=\"14\"\r\n\t\treadonly=\"true\" selectable=\"false\" blinkCursor=\"false\"\r\n\t\ttextColor=\"#CC000000\" highlightTextColor=\"#FF000000\"\r\n\t\tleftPadValue=\"8\" topPadValue=\"8\" \r\n        defaultTextEntry=\"1\" defaultTextScroll=\"1\">{message}</TEXTAREA>\r\n    \r\n    <TEXT name=\"legend\" x=\"984\" y=\"548\" width=\"652\" height=\"18\" fontSize=\"18\" align=\"right\" textColor=\"#CCFFFFFF\">[CROSS] Continue</TEXT>\r\n    <QUICKLINK name=\"refresh\" button=\"SV_PAD_X\" linkOption=\"NORMAL\" href=\"../home/homeEnterWorld.jsp\"/>\r\n</SVML>\r\n";
